@@ -1,0 +1,47 @@
+create table usuarios
+(
+  cpf integer,
+  nome varchar(50),
+  sobrenome varchar(50),
+  cargo varchar(50),
+  curso_id integer
+  );
+  
+  create table cursos
+  (
+    id integer,
+    nome_curso varchar(50),
+    professor varchar(50),
+    categoria varchar(50)
+    );
+  
+  insert into usuarios (cpf,nome,sobrenome,cargo,curso_id)
+  values ('123','Klaus','Wolff','aluno','1');
+  
+  insert into usuarios (cpf,nome,sobrenome,cargo,curso_id)
+  values ('1234','Pedro','Brocaldi','professor','1');
+  
+  insert into usuarios (cpf,nome,sobrenome,cargo,curso_id)
+  values ('345','Antônio','Machado','aluno','2');
+  
+  insert into usuarios (cpf,nome,sobrenome,cargo,curso_id)
+  values ('34567','Antônio','Nunes','aluno','2');
+  
+  insert into usuarios (cpf,nome,sobrenome,cargo,curso_id)
+  values ('456','Márcio','Rocha','aluno','2');
+  
+  insert into usuarios (cpf,nome,sobrenome,cargo,curso_id)
+  values ('12345','José','Mill','aluno','1');
+  
+  insert into cursos (id,nome_curso,professor,categoria)
+  values('1','Ti do Zero','Pedro Brocaldi','Programação');
+  
+  insert into cursos (id,nome_curso,professor,categoria)
+  values('2','SQL','Carlos','Dados');
+  
+  update usuarios
+  set curso_id='2'
+  where cpf= 345;
+
+select * from usuarios
+where cpf='345';
